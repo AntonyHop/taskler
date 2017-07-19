@@ -1,0 +1,51 @@
+*{
+	margin:0;
+	padding: 0;
+}
+body{
+	background:url(../img/desktop.jpg) no-repeat;
+	background-attachment:fixed;
+	background-size: 100% 100%;
+}
+
+.login{
+	margin-top:10% !important;
+}
+.signIn{
+	float:right;
+}
+
+.options{
+	margin-bottom: 10px;
+}
+#err{
+	min-width: 300px;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+.img_preview{
+	width:100%;
+}
+.task{
+	word-wrap: break-word;
+	border: 1px solid #ccc;
+	background: #e3e3e3;
+	border-radius: 5px;
+	margin:0 auto;
+	padding: 5px;
+	min-height:250px;
+	margin-top: 10px;
+}
+.success{
+	background: #ace3b0;
+}
+.clear{
+	clear:both;
+}
+.sortBy{
+	margin-right: 5px;
+	margin-bottom: 3px;
+	text-align: left;
+}
