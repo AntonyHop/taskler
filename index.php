@@ -2,7 +2,7 @@
     require_once ("config.php");
 
     spl_autoload_register(function ($class) {
-        include 'lib/' . $class . '.class.php';
+        include './lib/' . $class . '.class.php';
     }); 
  
     session_start();

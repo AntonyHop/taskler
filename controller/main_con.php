@@ -16,7 +16,7 @@ class main_con extends controller{
    function regist(){
       $user = $this->load_model("user");
       if(isset($_POST["user"])){
-         $user->add($_POST["user"]["name"],$_POST["user"]["pass"]);
+         $user->add($_POST["name"],$_POST["pass"]);
          $user->get_error_list();
       }
    }

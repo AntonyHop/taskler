@@ -9,7 +9,12 @@ body{
 }
 
 .login{
-	margin-top:10% !important;
+	margin-top:5% !important;
+	padding: 0 !important;
+}
+
+.login .card-block{
+	padding: 30px;
 }
 .signIn{
 	float:right;

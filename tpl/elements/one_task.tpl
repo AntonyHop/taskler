@@ -14,14 +14,14 @@
         <p id="taskText" class="col-md-12 mt-2"><?=$task['Text']?></p>
         <div class="form-check float-md-right col-md-4">
             <label class="form-check-label text-success ta-md-right">
-                <input type="checkbox" id="success" class="form-check-input" <?=($task['sucess']==1)?'checked':''?> value="<?=$task['id']?>">
+                <input type="checkbox" id="success" class="form-check-input" <?=(isset($task['sucess']) && $task['sucess']==1)?'checked':''?> value="<?=$task['id']?>">
                 Task complete!
             </label>
         </div>
         <?if (isAuth()){?>
         <div class="col-md-7 col-md-float-right">
             <div class="btn-group options">
-                <?if ($task['sucess']==0){?>
+                <?if (isset($task['sucess']) && $task['sucess']==0){?>
                     <button class="btn btn-secondary" onclick="location.href='/task/edit/<?=$task['id']?>'" id="edit_task" value="<?=$task['id']?>"><i class="fa fa-pencil" aria-hidden="true"></i></button>
                 <?}else{?>
                     <button class="btn btn-secondary hidden-xl-down" onclick="location.href='/task/edit/<?=$task['id']?>'" id="edit_task" value="<?=$task['id']?>"><i class="fa fa-pencil" aria-hidden="true"></i></button>

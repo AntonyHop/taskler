@@ -5,22 +5,22 @@
             <strong class="sortBy align-content-around">Sort by:</strong>
             <div class="form-check mb-2 mr-sm-2 mb-sm-0">
                 <label class="form-check-label">
-                    <input name="filter" class="form-check-input" onchange="javascript:location.href = '?page=0&filter=`id`'" type="radio" <?=($_GET['filter'] == '`id`' || empty($_GET['filter']))?'checked':''?>> Id
+                    <input name="filter" class="form-check-input" onchange="javascript:location.href = '?page=0&filter=`id`'" type="radio" <?=(empty($_GET['filter']) || $_GET['filter'] == '`id`')?'checked':''?>> Id
                 </label>
             </div>
             <div class="form-check mb-2 mr-sm-2 mb-sm-0">
                 <label class="form-check-label">
-                    <input name="filter" class="form-check-input"  onchange="javascript:location.href = '?page=0&filter=`sucess`'" type="radio" <?=($_GET['filter'] == '`sucess`')?'checked':''?> > Status
+                    <input name="filter" class="form-check-input"  onchange="javascript:location.href = '?page=0&filter=`sucess`'" type="radio" <?=(empty($_GET['filter']) || $_GET['filter'] == '`sucess`')?'checked':''?> > Status
                 </label>
             </div>
             <div class="form-check mb-2 mr-sm-2 mb-sm-0">
                 <label class="form-check-label">
-                    <input name="filter" class="form-check-input"  onchange="javascript:location.href = '?page=0&filter=`Username`'" type="radio" <?=($_GET['filter'] == '`Username`')?'checked':''?> > Username
+                    <input name="filter" class="form-check-input"  onchange="javascript:location.href = '?page=0&filter=`Username`'" type="radio" <?=( empty($_GET['filter']) || $_GET['filter'] == '`Username`')?'checked':''?> > Username
                 </label>
             </div>
             <div class="form-check mb-2 mr-sm-2 mb-sm-0">
                 <label class="form-check-label">
-                    <input name="filter" class="form-check-input"  onchange="javascript:location.href = '?page=0&filter=`E-mail`'" type="radio" <?=($_GET['filter'] == '`E-mail`')?'checked':''?> > E-Mail
+                    <input name="filter" class="form-check-input"  onchange="javascript:location.href = '?page=0&filter=`E-mail`'" type="radio" <?=(empty($_GET['filter']) || $_GET['filter'] == '`E-mail`')?'checked':''?> > E-Mail
                 </label>
             </div>
         </form>

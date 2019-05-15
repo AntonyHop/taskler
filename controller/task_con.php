@@ -25,14 +25,15 @@ class task_con extends controller {
 
             if (isset($_GET["page"])){
                 $show_page = $_GET["page"]*$tasks_on_page;
+                 $_SESSION["curr_page"] = $_GET["page"];
+
             }
             if (isset($_GET["filter"])){
                 $show_filtred = $_GET["filter"];
             }
 
             $task_list = $tasks->getAllLimit($show_filtred,"DESC",$show_page,$tasks_on_page);
-            $_SESSION["curr_page"] = $_GET["page"];
-
+           
             $this->tpl->set("task_count",(string) $pages_count);
             $this->tpl->set("title","Tasks");
             $this->tpl->set("tasks",$task_list);
